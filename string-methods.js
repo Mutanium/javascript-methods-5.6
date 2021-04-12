@@ -12,7 +12,7 @@ console.log(word.length);
 
 const fruit = "Banaan";
 const vegetable = "Aardappel";
-console.log(fruit.length > vegetable.length);
+console.log(fruit.length > vegetable.length); //maak de vergelijking met .length
 
 
 /* Opdracht 2 */
@@ -22,7 +22,7 @@ console.log(fruit.length > vegetable.length);
 // ---- Verwachte uitkomst voor vegetable: "l"
 
 // direct
-console.log(fruit.charAt (fruit.length-1));
+console.log(fruit.charAt (fruit.length-1)); //length-1 is de laatste letter omdat we beginnen met positie nul
 console.log(vegetable.charAt (vegetable.length-1));
 
 //met een herbruikbare methode

@@ -12,9 +12,9 @@ console.log(currentDay);
 // ---- Verwachte uitkomsten:
 // Uren: 16 (als er een vier in de klok zit op het moment van aanroepen)
 // Minuten: 36 (als het 16:36 is op het moment van aanroepen)
-const currentHoursMinutes =new Date();
-console.log(currentHoursMinutes.getHours());
-console.log(currentHoursMinutes.getMinutes());
+const currentTime =new Date();
+console.log(currentTime.getHours());
+console.log(currentTime.getMinutes());
 
 
 
@@ -30,8 +30,8 @@ const longOptions = {
     month: 'long',
     day: 'numeric',
 };
-const dutchDate = currentHoursMinutes.toLocaleDateString('nl-NL', longOptions);
+const dutchDate = currentTime.toLocaleDateString('nl-NL', longOptions);
 console.log(dutchDate);
 
-const intDate = currentHoursMinutes.toDateString();
+const intDate = currentTime.toDateString();
 console.log(intDate);
