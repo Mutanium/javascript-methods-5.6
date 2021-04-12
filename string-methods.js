@@ -12,7 +12,7 @@ console.log(word.length);
 
 const fruit = "Banaan";
 const vegetable = "Aardappel";
-
+console.log(fruit.length > vegetable.length);
 
 
 /* Opdracht 2 */
@@ -21,6 +21,24 @@ const vegetable = "Aardappel";
 // ---- Verwachte uitkomst voor fruit: "n"
 // ---- Verwachte uitkomst voor vegetable: "l"
 
+// direct
+console.log(fruit.charAt (fruit.length-1));
+console.log(vegetable.charAt (vegetable.length-1));
+
+//met een herbruikbare methode
+function lastc (ingredient) {
+    return ingredient.charAt (ingredient.length-1);
+}
+console.log(lastc(fruit));
+console.log(lastc(vegetable));
+
+//en met methode uit de console log gehaald
+const fruit2 = lastc(fruit);
+const vegetable2 =lastc(vegetable);
+
+console.log(fruit2,vegetable2);
+
+
 
 
 /* Opdracht 3 */
@@ -28,6 +46,8 @@ const vegetable = "Aardappel";
 // ---- Verwachte uitkomst: "De kat krabt de krullen van de trap"
 
 const userInput = "  De kat krabt de krullen van de trap ";
+console.log(userInput.trim());
+
 
 
 
@@ -36,13 +56,16 @@ const userInput = "  De kat krabt de krullen van de trap ";
 // ---- Verwachte uitkomst: true
 
 const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch, nietwaar?"
+console.log(story.includes("Fantastisch"));
 
 
 
 /* Opdracht 5 */
 // Knip de vraag van bovenstaande tekst (story) af, zodat alleen het eerste gedeelte overblijft en log dit in de terminal.
 // ---- Verwachte uitkomst: "We vinden de behaalde resultaten werkelijk prachtig."
-
+//unieke lokatie = ". " daarom einde +1 om de zin te laten eidigen met een punt
+const einde = story.indexOf(". ") +1;
+console.log(story.substring(0, einde));
 
 
 /* Opdracht 6 */
@@ -53,6 +76,9 @@ const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch,
 // ---- Verwachte uitkomst: "€35,59"
 
 const price = "$35.59";
+const priceNL = price.replace(".",",").replace("$","€");
+
+console.log(priceNL);
 
 
 
